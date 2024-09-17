@@ -14,4 +14,6 @@ public interface UserApi {
 
     @POST("signup")
     Call<TokenResponse> signup(@Body SignupRequest signupRequest);
+
+
 }
