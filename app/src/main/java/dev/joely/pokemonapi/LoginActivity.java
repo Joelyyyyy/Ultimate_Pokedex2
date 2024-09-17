@@ -34,7 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.login_button);
         signupButton = findViewById(R.id.signup_button);
 
-        userApi = ApiClient.getClient().create(UserApi.class);
+        // Initialize ApiClient with context
+        userApi = ApiClient.getClient(this).create(UserApi.class);
         sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
 
         loginButton.setOnClickListener(v -> login());
